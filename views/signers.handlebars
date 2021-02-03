@@ -1,0 +1,14 @@
+<h1>People who signed the petition:</h1>
+
+<ol>
+        {{#each signers}}
+        <li>{{firstname}} {{lastname}}</li>
+                <ul>
+                        {{#if age}}
+                        <li>Age: {{age}}</li>
+                        {{/if}}
+                        <li>City: {{city}}</li>
+                        <li>Web: <a href="{{homepage}}" target="_blank">{{homepage}}</a></li>
+                </ul>
+        {{/each}}
+</ol>

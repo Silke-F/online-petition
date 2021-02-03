@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <meta name="viewport" content="width=device-width" initial-scale="1">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+
+
+</head>
+
+<body>
+
+    <header>
+
+        {{#if userId}}
+
+        <div id="main-menu-loggedin">
+
+            <div><a class="home" href="../">♥ PETITION PROJECT</a></div>
+
+            <nav>
+                <a href="..#about">About</a> |
+                <a href="../signers">See signers</a> |
+                <a href="../edit-profile">Profile</a> |
+                <form method="POST" action="/logout">
+                        <input type="hidden" name="_csrf" value="{{csrfToken}}">
+                        <button id="logout">Logout</button>
+                </form>
+            </nav>
+
+        </div>
+        
+        {{else}}
+
+        <div id="main-menu-loggedout">
+
+            <div><a class="home" href="../">♥ PETITION PROJECT</a></div>
+
+            <nav>
+                <a href="../register">Sign</a> |
+                <a href="..#about">About</a> |
+                <a href="../login">Login</a>
+            </nav>
+
+        </div>
+
+        
+
+
+        {{/if}}
+
+
+    </header>
+
+    <main>
+
+        {{{ body }}}
+
+    </main>
+
+    <footer>
+        copyright
+    </footer>
+</body>
+
+</html>

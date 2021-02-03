@@ -1,0 +1,360 @@
+/* --------- MAIN -------- */ 
+
+body {
+    margin: 0px;
+    background: #F5F5F5;
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    height: 70px;    
+    background: #222222;
+    color: white;
+    margin-bottom: 20px;
+}
+
+.home {
+    text-decoration: none;
+    cursor: pointer;
+    color: white;
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    cursor: pointer;
+}
+
+header #main-menu-loggedin {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 25px;
+}
+
+header #main-menu-loggedout {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 25px;
+}
+
+button#logout {
+    border: none;
+    background: none;
+    display: inline-flex;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+nav a, nav #logout {
+    padding-right: 20px;
+    padding-left: 20px;
+    text-decoration: none;
+}
+
+nav a:hover, nav #logout:hover {
+    color: #98B6CD;
+}
+
+header nav a, header nav #logout {
+    color: white;
+}
+
+footer {
+    margin-top: 50px;
+    height: 30px;
+    background: #222222;
+    color: white;
+    padding-top: 10px;
+    padding-left: 10px;
+}
+
+/* --------- HOME -------- */ 
+
+main {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-weight: 300;
+    padding-bottom: 5px;
+}
+
+h1:after {
+    display: block;
+    content: "";
+    border-top: 4px solid black;
+    width: 50px;
+    transform: translateY(1rem);
+}
+
+h2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-weight: 300;
+    padding-bottom: 5px;
+}
+
+h2:after {
+    display: block;
+    content: "";
+    border-top: 4px solid black;
+    width: 50px;
+    transform: translateY(1rem);
+}
+
+section#img-section {
+    flex-direction: row;
+    margin-top: 20px;
+}
+
+section#img-section img {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+}
+
+#about-description {
+    display: flex;
+    flex-direction: column;
+    width: 800px;
+}
+
+#more {
+    font-size: 70px;
+}
+
+#more a {
+    text-decoration: none;
+    color: black;
+}
+
+canvas {
+    display: block;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    background: white;
+    border: solid black 1px;
+}
+
+div#home-buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.error {
+    background: red;
+    padding: 15px 20px;
+    margin-bottom: 20px;
+}
+
+button#clear-signature {
+    background-color: white; 
+    color: #1A3661; 
+    border: 2px solid #1A3661;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 18px;
+    margin: 2px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+  
+button#clear-signature:hover {
+    background-color: #1A3661;
+    color: white;
+}
+
+button#sign-petition {
+    background-color: #357C69; 
+    color: white; 
+    border: 2px solid #357C69;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 18px;
+    margin: 2px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+  
+button#sign-petition:hover {
+    background-color: white;
+    color: #357C69;
+    border: 2px solid #357C69;
+}
+
+/* --------- REGISTER -------- */ 
+
+section#register {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+}
+
+input {
+    width: 80%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+button#loginbutton {
+    max-width: 435px;
+    width: 80%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-decoration: none;
+    background-color: #45a049;
+
+}
+
+section#register button, #loginbutton a {
+    width: 80%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-decoration: none;
+}
+  
+section#register button:hover, #loginbutton a {
+    background-color: #45a049;
+}
+
+
+
+
+/* --------- LOGIN -------- */ 
+
+section#login {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+}
+
+section#login button {
+    width: 80%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+  
+section#login button:hover {
+    background-color: #45a049;
+}
+
+/* --------- SIGNERS -------- */ 
+
+section#update-profile {
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+    align-items: center;
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+}
+
+section#update-profile button {
+    width: 80%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+  
+section#update-profile button:hover {
+    background-color: #45a049;
+}
+
+
+/* --------- EDIT PROFILE -------- */ 
+
+section#edit-profile {
+    display: flex;
+    flex-direction: column;
+    width: 800px;
+    align-items: center;
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+}
+
+section#edit-profile button {
+    width: 700px;
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#editprofile input {
+    margin-top: 10px;
+    margin-bottom: 30px;
+    width: 700px;
+}
+
+
+
+/* --------- THANK YOU -------- */ 
+
+div.links {
+    margin: 15px;
+}
+
+button.unsign {
+    width: 200px;
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}

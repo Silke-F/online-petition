@@ -1,0 +1,21 @@
+<h1>Hey pal!</h2>
+<p>Please update your data and continue signing.</p>
+
+<form method="POST" action="/profile">
+
+    {{#if error}}
+    <div class="error">{{error}}</div>
+    {{/if}}
+
+    <section id="update-profile">
+        <input type="number" name="age" placeholder="Age*">
+        <input type="text" name="city" placeholder="City*">
+        <input type="text" name="homepage" placeholder="Homepage*">
+
+        <input type="hidden" name="_csrf" value="{{csrfToken}}">
+
+        <button>Update profile</button>
+
+    </section>
+
+</form>

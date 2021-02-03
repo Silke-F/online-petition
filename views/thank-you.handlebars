@@ -1,0 +1,18 @@
+<h1>Thank you for signing the petition {{user.firstname}}!</h1>
+
+<div>
+<img src="{{signature.signature_code}}">
+</div>
+
+<div class="links">
+<a href="/signers">See people who signed</a>
+</div>
+<div class="links">
+<a href="/edit-profile">Edit your profile</a>
+</div>
+
+
+<form method="POST" action="/unsign">
+    <button class="unsign">Unsign the petition</button>
+    <input type="hidden" name="_csrf" value="{{csrfToken}}">
+</form>

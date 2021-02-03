@@ -1,0 +1,18 @@
+<form method="POST" action="/login">
+
+    {{#if error}}
+    <div class="error">{{error}}</div>
+    {{/if}}
+
+        <h1>Login to see your signature and profile</h1>
+
+        <section id="login">
+
+            <input type="email" name="email" placeholder="Email">
+            <input type="password" name="password" placeholder="Password">
+
+            <input type="hidden" name="_csrf" value="{{csrfToken}}">
+
+            <button>Login</button>
+
+</form>

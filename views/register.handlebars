@@ -1,0 +1,26 @@
+
+    <form method="POST" action="/register">
+
+        {{#if error}}
+        <div class="error">{{error}}</div>
+        {{/if}}
+
+        <h1>Register here to support my petition</h1>
+
+        <section id="register">
+
+            <input type="text" name="firstname" placeholder="First name*">
+            <input type="text" name="lastname" placeholder="Last name*">
+            <input type="email" name="email" placeholder="Email*">
+            <input type="password" name="password" placeholder="Password*">
+
+            <input type="hidden" name="_csrf" value="{{csrfToken}}">
+
+            <button type="submit">Register</button>
+
+        </section>
+
+    </form>
+
+    <p>You already have a profile?</p>
+    <button id="loginbutton"><a href="/login">Login here</a></button>

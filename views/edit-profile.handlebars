@@ -1,0 +1,55 @@
+<h1>Hola {{user.firstname}}! </h1>
+<p>Edit your profile here:</p>
+
+<section id="edit-profile">
+
+    <form id="editprofile" method="POST" action="/edit-profile">
+
+        <div>
+            <label for="">First name</label>
+        </div>
+        <div>
+            <input type="text" name="firstname" value="{{user.firstname}}">
+        </div>
+        <div>
+            <label for="">Last name</label>
+        </div>
+        <div>
+            <input type="text" name="lastname" value="{{user.lastname}}">
+        </div>
+        <div>
+            <label for="">Email</label>
+        </div>
+        <div>
+            <input type="text" name="email" value="{{user.email}}">
+
+        </div>
+        <div>
+            <label for="">Password <br><small>(Leave empty, if you don't want to change it)</small></label>
+        </div>
+        <div>
+            <input type="password" name="password">
+        </div>
+        <div>
+            <label for="">Age</label>
+        </div>
+        <div>
+            <input type="text" name="age" value="{{profile.age}}"></div>
+        <div>
+            <label for="">City</label>
+        </div>
+        <div>
+            <input type="text" name="city" value="{{profile.city}}"></div>
+        <div>
+            <label for="">Homepage</label></div>
+        <div>
+            <input type="text" name="homepage" value="{{profile.homepage}}">
+        </div>
+        <div>
+            <input type="hidden" name="_csrf" value="{{csrfToken}}">
+        </div>
+        <button>Save</button>
+
+    </form>
+
+</section>
